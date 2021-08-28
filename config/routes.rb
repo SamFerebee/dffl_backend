@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  ###USER STUFF
+  post "/create_account", to: "users#create_account"
+  post "/login", to: "users#login"
 end
