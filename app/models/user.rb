@@ -70,6 +70,14 @@ class User < ApplicationRecord
             self.season_records[2019] = {wins: 7, losses: 6}
             self.season_records[2020] = {wins: 7, losses: 6}
             self.current_season_rank = 1
+            self.championships.push("2018")
+            self.playoff_appearances.push("2014")
+            self.playoff_appearances.push("2015")
+            self.playoff_appearances.push("2016")
+            self.playoff_appearances.push("2017")
+            self.playoff_appearances.push("2018")
+            self.playoff_appearances.push("2019")
+            self.playoff_appearances.push("2020")
         elsif name == "cooper@cooper.com"
             self.season_records[2014] = {wins: 7, losses: 6}
             self.season_records[2015] = {wins: 7, losses: 6}
@@ -79,25 +87,99 @@ class User < ApplicationRecord
             self.season_records[2019] = {wins: 8, losses: 5}
             self.season_records[2020] = {wins: 9, losses: 4}
             self.current_season_rank = 2
+            self.championships.push("2017")
+            self.championships.push("2019")
         elsif name == "brian@brian.com"
-
+            self.season_records[2014] = {wins: 5, losses: 8}
+            self.season_records[2015] = {wins: 7, losses: 6}
+            self.season_records[2016] = {wins: 9, losses: 4}
+            self.season_records[2017] = {wins: 4, losses: 9}
+            self.season_records[2018] = {wins: 10, losses: 3}
+            self.season_records[2019] = {wins: 6, losses: 7}
+            self.season_records[2020] = {wins: 9, losses: 4}
+            self.current_season_rank = 1
+            self.championships.push("2016")
         elsif name == "doug@doug.com"
-
+            self.season_records[2014] = {wins: 7, losses: 6}
+            self.season_records[2015] = {wins: 8, losses: 5}
+            self.season_records[2016] = {wins: 8, losses: 5}
+            self.season_records[2017] = {wins: 10, losses: 3}
+            self.season_records[2018] = {wins: 9, losses: 4}
+            self.season_records[2019] = {wins: 7, losses: 6}
+            self.season_records[2020] = {wins: 7, losses: 6}
+            self.current_season_rank = 1
         elsif name == "shark@shark.com"
-
+            self.season_records[2014] = {wins: 7, losses: 6}
+            self.season_records[2015] = {wins: 8, losses: 5}
+            self.season_records[2016] = {wins: 8, losses: 5}
+            self.season_records[2017] = {wins: 10, losses: 3}
+            self.season_records[2018] = {wins: 9, losses: 4}
+            self.season_records[2019] = {wins: 7, losses: 6}
+            self.season_records[2020] = {wins: 7, losses: 6}
+            self.current_season_rank = 1
         elsif name == "bush@bush.com"
-
+            self.season_records[2014] = {wins: 7, losses: 6}
+            self.season_records[2015] = {wins: 8, losses: 5}
+            self.season_records[2016] = {wins: 8, losses: 5}
+            self.season_records[2017] = {wins: 10, losses: 3}
+            self.season_records[2018] = {wins: 9, losses: 4}
+            self.season_records[2019] = {wins: 7, losses: 6}
+            self.season_records[2020] = {wins: 7, losses: 6}
+            self.current_season_rank = 1
         elsif name == "tony@tony.com"
-
+            self.season_records[2014] = {wins: 7, losses: 6}
+            self.season_records[2015] = {wins: 8, losses: 5}
+            self.season_records[2016] = {wins: 8, losses: 5}
+            self.season_records[2017] = {wins: 10, losses: 3}
+            self.season_records[2018] = {wins: 9, losses: 4}
+            self.season_records[2019] = {wins: 7, losses: 6}
+            self.season_records[2020] = {wins: 7, losses: 6}
+            self.current_season_rank = 1
         elsif name == "dorn@dorn.com"
-
+            self.season_records[2014] = {wins: 7, losses: 6}
+            self.season_records[2015] = {wins: 8, losses: 5}
+            self.season_records[2016] = {wins: 8, losses: 5}
+            self.season_records[2017] = {wins: 10, losses: 3}
+            self.season_records[2018] = {wins: 9, losses: 4}
+            self.season_records[2019] = {wins: 7, losses: 6}
+            self.season_records[2020] = {wins: 7, losses: 6}
+            self.current_season_rank = 1
         elsif name == "colin@colin.com"
-
+            self.season_records[2014] = {wins: 9, losses: 4}
+            self.season_records[2015] = {wins: 8, losses: 5}
+            self.season_records[2016] = {wins: 8, losses: 5}
+            self.season_records[2017] = {wins: 10, losses: 3}
+            self.season_records[2018] = {wins: 9, losses: 4}
+            self.season_records[2019] = {wins: 7, losses: 6}
+            self.season_records[2020] = {wins: 7, losses: 6}
+            self.current_season_rank = 1
         elsif name == "kwags@kwags.com"
-
+            self.season_records[2014] = {wins: 10, losses: 3}
+            self.season_records[2015] = {wins: 8, losses: 5}
+            self.season_records[2016] = {wins: 8, losses: 5}
+            self.season_records[2017] = {wins: 10, losses: 3}
+            self.season_records[2018] = {wins: 9, losses: 4}
+            self.season_records[2019] = {wins: 7, losses: 6}
+            self.season_records[2020] = {wins: 7, losses: 6}
+            self.current_season_rank = 1
         elsif name == "dylan@dylan.com"
-
+            self.season_records[2014] = {wins: 7, losses: 6}
+            self.season_records[2015] = {wins: 8, losses: 5}
+            self.season_records[2016] = {wins: 8, losses: 5}
+            self.season_records[2017] = {wins: 10, losses: 3}
+            self.season_records[2018] = {wins: 9, losses: 4}
+            self.season_records[2019] = {wins: 7, losses: 6}
+            self.season_records[2020] = {wins: 7, losses: 6}
+            self.current_season_rank = 1
         elsif name == "dank@dank.com"
+            self.season_records[2014] = {wins: 7, losses: 6}
+            self.season_records[2015] = {wins: 8, losses: 5}
+            self.season_records[2016] = {wins: 8, losses: 5}
+            self.season_records[2017] = {wins: 10, losses: 3}
+            self.season_records[2018] = {wins: 9, losses: 4}
+            self.season_records[2019] = {wins: 7, losses: 6}
+            self.season_records[2020] = {wins: 7, losses: 6}
+            self.current_season_rank = 1
         end
 
     end
@@ -136,26 +218,86 @@ class User < ApplicationRecord
             self.season_points[2019] = {for: 1815.61, against: 1832.82}
             self.season_points[2020] = {for: 1679.06, against: 1539.33}
         elsif email == "brian@brian.com"
-
+            self.season_points[2014] = {for: 1551.84, against: 1503.78}
+            self.season_points[2015] = {for: 1688.36, against: 1684.65}
+            self.season_points[2016] = {for: 1706.65, against: 1565.69}
+            self.season_points[2017] = {for: 1434.44, against: 1555.60}
+            self.season_points[2018] = {for: 1973.33, against: 1670.87}
+            self.season_points[2019] = {for: 1640.29, against: 1625.77}
+            self.season_points[2020] = {for: 1765.33, against: 1721.56}
         elsif email == "doug@doug.com"
-
+            self.season_points[2014] = {for: 1551.84, against: 1503.78}
+            self.season_points[2015] = {for: 1629.72, against: 1707.38}
+            self.season_points[2016] = {for: 1488.94, against: 1716.26}
+            self.season_points[2017] = {for: 1683.05, against: 1476.78}
+            self.season_points[2018] = {for: 1674.29, against: 1697.53}
+            self.season_points[2019] = {for: 1815.61, against: 1832.82}
+            self.season_points[2020] = {for: 1679.06, against: 1539.33}
         elsif email == "shark@shark.com"
-
+            self.season_points[2014] = {for: 1551.84, against: 1503.78}
+            self.season_points[2015] = {for: 1629.72, against: 1707.38}
+            self.season_points[2016] = {for: 1488.94, against: 1716.26}
+            self.season_points[2017] = {for: 1683.05, against: 1476.78}
+            self.season_points[2018] = {for: 1674.29, against: 1697.53}
+            self.season_points[2019] = {for: 1815.61, against: 1832.82}
+            self.season_points[2020] = {for: 1679.06, against: 1539.33}
         elsif email == "bush@bush.com"
-
+            self.season_points[2014] = {for: 1551.84, against: 1503.78}
+            self.season_points[2015] = {for: 1629.72, against: 1707.38}
+            self.season_points[2016] = {for: 1488.94, against: 1716.26}
+            self.season_points[2017] = {for: 1683.05, against: 1476.78}
+            self.season_points[2018] = {for: 1674.29, against: 1697.53}
+            self.season_points[2019] = {for: 1815.61, against: 1832.82}
+            self.season_points[2020] = {for: 1679.06, against: 1539.33}
         elsif email == "tony@tony.com"
-
+            self.season_points[2014] = {for: 1551.84, against: 1503.78}
+            self.season_points[2015] = {for: 1629.72, against: 1707.38}
+            self.season_points[2016] = {for: 1488.94, against: 1716.26}
+            self.season_points[2017] = {for: 1683.05, against: 1476.78}
+            self.season_points[2018] = {for: 1674.29, against: 1697.53}
+            self.season_points[2019] = {for: 1815.61, against: 1832.82}
+            self.season_points[2020] = {for: 1679.06, against: 1539.33}
         elsif email == "dorn@dorn.com"
-
+            self.season_points[2014] = {for: 1551.84, against: 1503.78}
+            self.season_points[2015] = {for: 1629.72, against: 1707.38}
+            self.season_points[2016] = {for: 1488.94, against: 1716.26}
+            self.season_points[2017] = {for: 1683.05, against: 1476.78}
+            self.season_points[2018] = {for: 1674.29, against: 1697.53}
+            self.season_points[2019] = {for: 1815.61, against: 1832.82}
+            self.season_points[2020] = {for: 1679.06, against: 1539.33}
         elsif email == "colin@colin.com"
-
+            self.season_points[2014] = {for: 1585.38, against: 1530.88}
+            self.season_points[2015] = {for: 1629.72, against: 1707.38}
+            self.season_points[2016] = {for: 1488.94, against: 1716.26}
+            self.season_points[2017] = {for: 1683.05, against: 1476.78}
+            self.season_points[2018] = {for: 1674.29, against: 1697.53}
+            self.season_points[2019] = {for: 1815.61, against: 1832.82}
+            self.season_points[2020] = {for: 1679.06, against: 1539.33}
         elsif email == "kwags@kwags.com"
-
+            self.season_points[2014] = {for: 1756.48, against: 1526.20}
+            self.season_points[2015] = {for: 1629.72, against: 1707.38}
+            self.season_points[2016] = {for: 1488.94, against: 1716.26}
+            self.season_points[2017] = {for: 1683.05, against: 1476.78}
+            self.season_points[2018] = {for: 1674.29, against: 1697.53}
+            self.season_points[2019] = {for: 1815.61, against: 1832.82}
+            self.season_points[2020] = {for: 1679.06, against: 1539.33}
         elsif email == "dylan@dylan.com"
-
+            self.season_points[2014] = {for: 1551.84, against: 1503.78}
+            self.season_points[2015] = {for: 1629.72, against: 1707.38}
+            self.season_points[2016] = {for: 1488.94, against: 1716.26}
+            self.season_points[2017] = {for: 1683.05, against: 1476.78}
+            self.season_points[2018] = {for: 1674.29, against: 1697.53}
+            self.season_points[2019] = {for: 1815.61, against: 1832.82}
+            self.season_points[2020] = {for: 1679.06, against: 1539.33}
         elsif email == "dank@dank.com"
+            self.season_points[2014] = {for: 1551.84, against: 1503.78}
+            self.season_points[2015] = {for: 1629.72, against: 1707.38}
+            self.season_points[2016] = {for: 1488.94, against: 1716.26}
+            self.season_points[2017] = {for: 1683.05, against: 1476.78}
+            self.season_points[2018] = {for: 1674.29, against: 1697.53}
+            self.season_points[2019] = {for: 1815.61, against: 1832.82}
+            self.season_points[2020] = {for: 1679.06, against: 1539.33}
         end
-
     end
 
 end

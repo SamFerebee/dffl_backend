@@ -14,7 +14,7 @@ class UsersController < ApplicationController
         if params[:password] != params[:confirmation]
             render json: ["Passwords must match"]
         else
-            user = User.create(username: params[:username], password: params[:password], email: params[:email], avatar: params["avatar"], season_records: {}, season_points: {})
+            user = User.create(username: params[:username], password: params[:password], email: params[:email], avatar: params["avatar"], season_records: {}, season_points: {}, championships: [], playoff_appearances: [])
             user.season_records[2021] = {wins: 0, losses: 0};
             user.season_points[2021] = {for: 0, against: 0}
             user.create_new_account_season_info(user.email)
