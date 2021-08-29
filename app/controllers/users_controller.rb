@@ -14,17 +14,12 @@ class UsersController < ApplicationController
         if params[:password] != params[:confirmation]
             render json: ["Passwords must match"]
         else
-            user = User.create(username: params[:username], password: params[:password], email: params[:email], avatar: params["avatar"], season_records: {})
+            user = User.create(username: params[:username], password: params[:password], email: params[:email], avatar: params["avatar"], season_records: {}, season_points: {})
             user.season_records[2021] = {wins: 0, losses: 0};
-            if user.email == "sam.ferebee@gmail.com"
-                user.season_records[2014] = {wins: 7, losses: 6}
-                user.season_records[2015] = {wins: 8, losses: 5}
-                user.season_records[2016] = {wins: 8, losses: 5}
-                user.season_records[2017] = {wins: 10, losses: 3}
-                user.season_records[2018] = {wins: 9, losses: 4}
-                user.season_records[2019] = {wins: 7, losses: 6}
-                user.season_records[2020] = {wins: 7, losses: 6}
-            end
+            user.season_points[2021] = {for: 0, against: 0}
+            user.create_new_account_season_info(user.email)
+            user.create_new_account_season_points
+            user.create_new_account_member_admin_status
             user.save
             if user.valid?
                 token = JWT.encode({user_id: user.id}, "secret", "HS256")
@@ -33,6 +28,17 @@ class UsersController < ApplicationController
                 render json: user.errors.full_messages
             end
         end
+    end
+
+    def get_season_data
+        dataHash = {};
+        ##get season_records[2021] for each
+        User.all.each do |user|
+            if user.member == true
+                dataHash[user.current_season_rank] = {name: user.username, avatar: url_for(user.avatar_attachment), wins: user.season_records["2021"]["wins"], losses: user.season_records["2021"]["losses"], points_for: user.season_points["2021"]["for"], points_against: user.season_points["2021"]["against"]}
+            end
+        end
+        render json: dataHash
     end
 
 end
