@@ -87,8 +87,14 @@ class User < ApplicationRecord
             self.season_records[2019] = {wins: 8, losses: 5}
             self.season_records[2020] = {wins: 9, losses: 4}
             self.current_season_rank = 2
+            self.playoff_appearances.push("2014")
+            self.playoff_appearances.push("2017")
+            self.playoff_appearances.push("2018")
+            self.playoff_appearances.push("2019")
+            self.playoff_appearances.push("2020")
             self.championships.push("2017")
             self.championships.push("2019")
+            self.last_place_finishes("2016")
         elsif name == "brian@brian.com"
             self.season_records[2014] = {wins: 5, losses: 8}
             self.season_records[2015] = {wins: 7, losses: 6}
@@ -97,8 +103,12 @@ class User < ApplicationRecord
             self.season_records[2018] = {wins: 10, losses: 3}
             self.season_records[2019] = {wins: 6, losses: 7}
             self.season_records[2020] = {wins: 9, losses: 4}
-            self.current_season_rank = 1
+            self.current_season_rank = 3
+            self.playoff_appearances.push("2016")
+            self.playoff_appearances.push("2018")
+            self.playoff_appearances.push("2020")
             self.championships.push("2016")
+            self.last_place_finishes("2017")
         elsif name == "doug@doug.com"
             self.season_records[2014] = {wins: 7, losses: 6}
             self.season_records[2015] = {wins: 8, losses: 5}

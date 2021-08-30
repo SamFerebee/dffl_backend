@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   ###GET DATA
   get "/get_season_data", to: "users#get_season_data"
+  get "/get_all_time_data", to: "users#get_all_time_data"
 end

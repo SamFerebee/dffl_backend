@@ -14,7 +14,7 @@ class UsersController < ApplicationController
         if params[:password] != params[:confirmation]
             render json: ["Passwords must match"]
         else
-            user = User.create(username: params[:username], password: params[:password], email: params[:email], avatar: params["avatar"], season_records: {}, season_points: {}, championships: [], playoff_appearances: [])
+            user = User.create(username: params[:username], password: params[:password], email: params[:email], avatar: params["avatar"], season_records: {}, season_points: {}, championships: [], playoff_appearances: [], last_place_finishes: [])
             user.season_records[2021] = {wins: 0, losses: 0};
             user.season_points[2021] = {for: 0, against: 0}
             user.create_new_account_season_info(user.email)
@@ -36,6 +36,16 @@ class UsersController < ApplicationController
         User.all.each do |user|
             if user.member == true
                 dataHash[user.current_season_rank] = {name: user.username, avatar: url_for(user.avatar_attachment), wins: user.season_records["2021"]["wins"], losses: user.season_records["2021"]["losses"], points_for: user.season_points["2021"]["for"], points_against: user.season_points["2021"]["against"]}
+            end
+        end
+        render json: dataHash
+    end
+
+    def get_all_time_data
+        dataHash = {}
+        User.all.each do |user|
+            if user.member == true
+                dataHash[user.username] = {name: user.username, avatar: url_for(user.avatar_attachment), wins: user.total_seasons_wins, losses: user.total_seasons_losses, points_for: user.total_seasons_points_for, points_against: user.total_seasons_points_against, winning_percentage: user.total_seasons_winning_percentage, championships: user.championships, last_place_finishes: user.last_place_finishes, playoff_appearances: user.playoff_appearances}
             end
         end
         render json: dataHash
