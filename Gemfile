@@ -50,5 +50,3 @@ gem 'capistrano3-puma'
 gem 'capistrano-sidekiq'
 gem 'ed25519', '~> 1.2'
 gem 'bcrypt_pbkdf', '~> 1'
-
-gem 'puma', '3.8.1'
