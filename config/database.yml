@@ -14,6 +14,7 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
+
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -81,6 +82,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: dffl_backend_production
   username: dffl_backend
   password: <%= ENV['DFFL_BACKEND_DATABASE_PASSWORD'] %>

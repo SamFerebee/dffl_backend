@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.3'
+ruby '2.7.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
@@ -42,3 +42,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "jwt", "~> 2.2"
 
 gem "active_model_serializers", "~> 0.10.12"
+
+gem 'capistrano', '3.4.0'
+gem 'capistrano-rvm'
+gem 'capistrano-rails', '1.1.3'
+gem 'capistrano3-puma'
+gem 'capistrano-sidekiq'
+gem 'ed25519', '~> 1.2'
+gem 'bcrypt_pbkdf', '~> 1'
+
+gem 'puma', '3.8.1'
