@@ -8,6 +8,7 @@ class User < ApplicationRecord
     has_one_attached :avatar
     validates :avatar, presence: true
     has_many :memes
+    has_many :comments
 
     def total_seasons_wins
         total = 0
