@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
     has_one_attached :avatar
     validates :avatar, presence: true
+    has_many :memes
 
     def total_seasons_wins
         total = 0
@@ -94,7 +95,7 @@ class User < ApplicationRecord
             self.playoff_appearances.push("2020")
             self.championships.push("2017")
             self.championships.push("2019")
-            self.last_place_finishes("2016")
+            self.last_place_finishes.push("2016")
         elsif name == "brian@brian.com"
             self.season_records[2014] = {wins: 5, losses: 8}
             self.season_records[2015] = {wins: 7, losses: 6}
@@ -108,7 +109,7 @@ class User < ApplicationRecord
             self.playoff_appearances.push("2018")
             self.playoff_appearances.push("2020")
             self.championships.push("2016")
-            self.last_place_finishes("2017")
+            self.last_place_finishes.push("2017")
         elsif name == "doug@doug.com"
             self.season_records[2014] = {wins: 7, losses: 6}
             self.season_records[2015] = {wins: 8, losses: 5}
