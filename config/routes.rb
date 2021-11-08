@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post "/create_account", to: "users#create_account"
   post "/login", to: "users#login"
   get "/get_user/:id", to: "users#me"
+  get "/all_users", to: "users#all"
 
   ###GET DATA
   get "/get_season_data", to: "users#get_season_data"

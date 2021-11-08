@@ -56,4 +56,8 @@ class UsersController < ApplicationController
         render json: user
     end
 
+    def all
+        render json: User.all
+    end
+
 end
