@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :chats
   resources :comments
   ###USER STUFF
   post "/create_account", to: "users#create_account"
@@ -17,5 +18,9 @@ Rails.application.routes.draw do
   get "/view_meme/:id", to: "memes#get_meme"
   patch "/rate_meme", to: "memes#rate_meme"
   post "/create_comment", to: "memes#create_comment"
+
+  ###CHAT STUFF
+  get "/get_chat", to: "chats#get_messages"
+  post "/submit_chat", to: "chats#submit_message"
 
 end
