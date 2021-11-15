@@ -71,7 +71,7 @@ class User < ApplicationRecord
             self.season_records[2018] = {wins: 9, losses: 4}
             self.season_records[2019] = {wins: 7, losses: 6}
             self.season_records[2020] = {wins: 7, losses: 6}
-            self.current_season_rank = 1
+            self.current_season_rank = 3
             self.championships.push("2018")
             self.playoff_appearances.push("2014")
             self.playoff_appearances.push("2015")
@@ -90,7 +90,7 @@ class User < ApplicationRecord
             self.season_records[2018] = {wins: 7, losses: 6}
             self.season_records[2019] = {wins: 8, losses: 5}
             self.season_records[2020] = {wins: 9, losses: 4}
-            self.current_season_rank = 2
+            self.current_season_rank = 4
             self.playoff_appearances.push("2014")
             self.playoff_appearances.push("2017")
             self.playoff_appearances.push("2018")
@@ -109,7 +109,7 @@ class User < ApplicationRecord
             self.season_records[2018] = {wins: 10, losses: 3}
             self.season_records[2019] = {wins: 6, losses: 7}
             self.season_records[2020] = {wins: 9, losses: 4}
-            self.current_season_rank = 3
+            self.current_season_rank = 7
             self.playoff_appearances.push("2016")
             self.playoff_appearances.push("2018")
             self.playoff_appearances.push("2020")
@@ -123,7 +123,7 @@ class User < ApplicationRecord
             self.season_records[2018] = {wins: 9, losses: 4}
             self.season_records[2019] = {wins: 7, losses: 6}
             self.season_records[2020] = {wins: 7, losses: 6}
-            self.current_season_rank = 1
+            self.current_season_rank = 11
         elsif name == "shark@shark.com"
             self.season_records[2014] = {wins: 7, losses: 6}
             self.season_records[2015] = {wins: 8, losses: 5}
@@ -132,7 +132,7 @@ class User < ApplicationRecord
             self.season_records[2018] = {wins: 9, losses: 4}
             self.season_records[2019] = {wins: 7, losses: 6}
             self.season_records[2020] = {wins: 7, losses: 6}
-            self.current_season_rank = 1
+            self.current_season_rank = 2
         elsif name == "bush@bush.com"
             self.season_records[2014] = {wins: 7, losses: 6}
             self.season_records[2015] = {wins: 8, losses: 5}
@@ -141,7 +141,7 @@ class User < ApplicationRecord
             self.season_records[2018] = {wins: 9, losses: 4}
             self.season_records[2019] = {wins: 7, losses: 6}
             self.season_records[2020] = {wins: 7, losses: 6}
-            self.current_season_rank = 1
+            self.current_season_rank = 9
         elsif name == "tony@tony.com"
             self.season_records[2014] = {wins: 7, losses: 6}
             self.season_records[2015] = {wins: 8, losses: 5}
@@ -159,7 +159,7 @@ class User < ApplicationRecord
             self.season_records[2018] = {wins: 9, losses: 4}
             self.season_records[2019] = {wins: 7, losses: 6}
             self.season_records[2020] = {wins: 7, losses: 6}
-            self.current_season_rank = 1
+            self.current_season_rank = 12
         elsif name == "colin@colin.com"
             self.season_records[2014] = {wins: 9, losses: 4}
             self.season_records[2015] = {wins: 8, losses: 5}
@@ -177,7 +177,7 @@ class User < ApplicationRecord
             self.season_records[2018] = {wins: 9, losses: 4}
             self.season_records[2019] = {wins: 7, losses: 6}
             self.season_records[2020] = {wins: 7, losses: 6}
-            self.current_season_rank = 1
+            self.current_season_rank = 10
         elsif name == "dylan@dylan.com"
             self.season_records[2014] = {wins: 7, losses: 6}
             self.season_records[2015] = {wins: 8, losses: 5}
@@ -186,7 +186,7 @@ class User < ApplicationRecord
             self.season_records[2018] = {wins: 9, losses: 4}
             self.season_records[2019] = {wins: 7, losses: 6}
             self.season_records[2020] = {wins: 7, losses: 6}
-            self.current_season_rank = 1
+            self.current_season_rank = 6
         elsif name == "dank@dank.com"
             self.season_records[2014] = {wins: 7, losses: 6}
             self.season_records[2015] = {wins: 8, losses: 5}
@@ -195,7 +195,7 @@ class User < ApplicationRecord
             self.season_records[2018] = {wins: 9, losses: 4}
             self.season_records[2019] = {wins: 7, losses: 6}
             self.season_records[2020] = {wins: 7, losses: 6}
-            self.current_season_rank = 1
+            self.current_season_rank = 5
         end
 
     end
