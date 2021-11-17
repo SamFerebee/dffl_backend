@@ -31,11 +31,12 @@ class UsersController < ApplicationController
     end
 
     def get_season_data
-        dataHash = {};
+        dataHash = [];
         ##get season_records[2021] for each
         User.all.each do |user|
             if user.member == true
-                dataHash[user.current_season_rank] = {name: user.username, avatar: url_for(user.avatar_attachment), wins: user.season_records["2021"]["wins"], losses: user.season_records["2021"]["losses"], points_for: user.season_points["2021"]["for"], points_against: user.season_points["2021"]["against"]}
+                data = {name: user.username, rank: user.current_season_rank ,avatar: url_for(user.avatar_attachment), wins: user.season_records["2021"]["wins"], losses: user.season_records["2021"]["losses"], points_for: user.season_points["2021"]["for"], points_against: user.season_points["2021"]["against"]}
+                dataHash.push(data);
             end
         end
         render json: dataHash
