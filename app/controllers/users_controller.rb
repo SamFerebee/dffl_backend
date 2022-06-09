@@ -6,7 +6,8 @@ class UsersController < ApplicationController
             token = JWT.encode({user_id: user.id}, "secret", "HS256")
             render json: user
         else
-            render json: ["Incorrect username or password"]
+            #render json: ["Incorrect username or password"]
+            render json: user.errors.full_messages
         end
     end
 
@@ -15,8 +16,6 @@ class UsersController < ApplicationController
             render json: ["Passwords must match"]
         else
             user = User.create(username: params[:username], password: params[:password], email: params[:email], avatar: params["avatar"], memes_rated: [], season_records: {}, season_points: {}, championships: [], playoff_appearances: [], last_place_finishes: [])
-            user.season_records[2021] = {wins: 0, losses: 0};
-            user.season_points[2021] = {for: 0, against: 0}
             user.create_new_account_season_info(user.email)
             user.create_new_account_season_points
             user.create_new_account_member_admin_status
